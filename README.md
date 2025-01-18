@@ -32,3 +32,19 @@ $$
 \end{align}
 $$
 and if we further **assume $\eta = \eta^\prime$ (fine tune and trigger injection has same learning rate)**, this two are the same.
+
+### 2
+
+Decide to do DLG first. Change code:
+```
+tp = transforms.ToTensor()
+```
+to
+```
+tp = transforms.Compose([
+    transforms.Resize(32),
+    transforms.CenterCrop(32),
+    transforms.ToTensor()
+])
+```
+Solve the problem that loss suddenly comes from normal to 100+ and stuck at that graph.
