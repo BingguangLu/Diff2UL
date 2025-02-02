@@ -174,3 +174,4 @@ cython_debug/
 /model
 /image
 *.pth
+result/mnist/FL_trim-mean_PGMs_Gp20_Lp10_bs64_Rtest.npy
